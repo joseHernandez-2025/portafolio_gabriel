@@ -1,4 +1,4 @@
-"use client";
+import Link from "next/link";
 
 import Image from "next/image";
 
@@ -22,7 +22,7 @@ export default function Home() {
       <section id="hero" className="pt-32 pb-20 text-center">
         <div className="flex flex-col items-center">
           <Image
-            src="/avatar.jpg"
+            src="/shared image.jpg"
             alt="José Gabriel"
             width={130}
             height={130}
@@ -30,7 +30,7 @@ export default function Home() {
           />
           <h2 className="text-4xl font-bold mt-6">José Gabriel Hernández</h2>
           <p className="text-gray-600 mt-3 max-w-md">
-            Estudiante | Desarrollador Web en formación | Entusiasta del inglés y la tecnología
+            Estudiante | futuro Ing. en logisticas y aduanas | Joven con principios
           </p>
         </div>
       </section>
@@ -42,7 +42,9 @@ export default function Home() {
           <p className="text-gray-700 leading-relaxed text-justify">
             Estudiante en formación y becario del programa empresarial Súperate, especializado
             en inglés, programación y valores. Actualmente curso mi último año y soy voluntario
-            en Fundación Glasswing, enseñando inglés a niños de escasos recursos.
+            en Fundación Glasswing, enseñando inglés a niños de escasos recursos. Tambien me desarrollo personalmente
+            en actividades que fortalecen mis habilidades blandas creando una cinergia entre mi vida
+            personal y mi desarrollo profecional.
           </p>
         </div>
       </section>
@@ -86,6 +88,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="border rounded-lg p-6 shadow-sm text-left">
               <h4 className="font-semibold mb-2">Dexpert</h4>
+              <img
+              src="/Image (1).jpg"
+              alt="Imagen"
+              className="w-[500px] h-[150px] object-cover rounded-xl mb-4"
+            />
               <p className="text-gray-700">
                 Plataforma que conecta jóvenes sin experiencia con pequeñas empresas.
                 Participé en el diseño y desarrollo, ayudando a nuestro equipo a ganar Expo Tec.
@@ -93,6 +100,11 @@ export default function Home() {
             </div>
             <div className="border rounded-lg p-6 shadow-sm text-left">
               <h4 className="font-semibold mb-2">Iglesia Manantial de Vida</h4>
+               <img
+              src="/shared image (1).jpg"
+              alt="Imagen"
+              className="w-[500px] h-[150px] object-cover rounded-xl mb-4"
+            />
               <p className="text-gray-700">
                 Líder y maestro, organizando actividades y talleres para jóvenes y niños,
                 fomentando valores, disciplina y crecimiento personal.
@@ -103,36 +115,29 @@ export default function Home() {
       </section>
 
       {/* CONTACTO */}
-      <section id="contact" className="py-16">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h3 className="text-2xl font-semibold mb-6">Contáctame</h3>
-          <form className="max-w-md mx-auto text-left space-y-4">
-            <input
-              type="text"
-              placeholder="Nombre"
-              className="w-full p-2 border rounded"
-              required
+      <section className="flex justify-center items-center gap-10 py-20 bg-amber-50 border-t border-gray-800">
+          <div>
+            <img
+              src="/shared image (2).jpg"
+              alt="Foto de contacto"
+              className="h-[500px] w-auto rounded-xl"
             />
-            <input
-              type="email"
-              placeholder="Correo electrónico"
-              className="w-full p-2 border rounded"
-              required
-            />
-            <textarea
-              placeholder="Mensaje"
-              className="w-full p-2 border rounded h-32"
-              required
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            >
-              Enviar mensaje
-            </button>
-          </form>
-        </div>
-      </section>
+          </div>
+ 
+          <div className="flex flex-col justify-center items-start">
+            <h2 className="text-2xl font-bold mb-2">Mis contactos</h2>
+            <p className="text-blue-400 hover:underline mb-2">
+            </p>
+            <Link
+              href="https://www.linkedin.com/in/jos%C3%A9-gabriel-hern%C3%A1ndez-linares-795892367?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              className="text-blue-400 hover:underline mt-2"
+              >
+                LinkedIn
+              </Link>
+            <p className="text-blue-400">Email: jgabriel.hlinares@gmail.com</p>
+          </div>
+        </section>
 
       {/* FOOTER */}
       <footer className="border-t py-6 text-center text-sm text-gray-600">
